@@ -2,7 +2,17 @@
 
 This is the Git repo of the [Docker image](https://hub.docker.com/r/cnadiminti/dynamodb-local) for [Amazon DynamoDB Local](https://aws.amazon.com/dynamodb/).
 
-## What is Amazon Dynamodb Local?
+## Supported tags and respective `Dockerfile` links
+
+-	[`latest` (*latest/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/Dockerfile)
+-	[`2017-02-16` (*2017-02-16/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2017-02-16/Dockerfile)
+-	[`2016-05-17` (*2016-05-17/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2016-05-17/Dockerfile)
+- [`2016-04-19` (*2016-04-19/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2016-04-19/Dockerfile)
+- [`2016-03-01` (*2016-03-01/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2016-03-01/Dockerfile)
+- [`2016-01-07_1.0` (*2016-01-07_1.0/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2016-01-07_1.0/Dockerfile)
+- [`2016-01-04_1.0` (*2016-01-04_1.0/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2016-01-04_1.0/Dockerfile)
+
+## What is Amazon DynamoDB Local?
 
 [Amazon DynamoDB](https://aws.amazon.com/dynamodb/) is a fast and flexible NoSQL database service for all applications that need consistent, single-digit millisecond latency at any scale. It is a fully managed cloud database and supports both document and key-value store models.
 
@@ -10,13 +20,39 @@ This is the Git repo of the [Docker image](https://hub.docker.com/r/cnadiminti/d
 
 ## How to use this image?
 
-### Start a Dynamodb Local instance
+### Start a DynamoDB Local instance
 
 ```console
-$ docker run -v "$PWD":/dynamodb_local_db -p 8000:8000 cnadiminti/dynamodb-local
+$ docker run -v "$PWD":/dynamodb_local_db -p 8000:8000 cnadiminti/dynamodb-local:latest
+Initializing DynamoDB Local with the following configuration:
+Port:	8000
+InMemory:	false
+DbPath:	/dynamodb_local_db
+SharedDb:	true
+shouldDelayTransientStatuses:	false
+CorsParams:	*
+
+
 ```
 
 This will add your current directory as a volume to the container and publish host port to container port.
+
+### Verify the DynamoDB Local instance
+
+Create a Table
+```console
+$ aws dynamodb create-table --table-name myTable --attribute-definitions AttributeName=id,AttributeType=S --key-schema AttributeName=id,KeyType=HASH --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5 --endpoint-url http://0.0.0.0:8000
+```
+
+List the Tables
+``` console
+$ aws dynamodb list-tables --endpoint-url http://0.0.0.0:8000 --output json
+{
+    "TableNames": [
+        "myTable"
+    ]
+}
+```
 
 ## License
 
