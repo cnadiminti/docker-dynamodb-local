@@ -5,6 +5,7 @@ This is the Git repo of the [Docker image](https://hub.docker.com/r/cnadiminti/d
 ## Supported tags and respective `Dockerfile` links
 
 -	[`latest` (*latest/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/Dockerfile)
+- [`2017-04-22_beta` (*2017-04-22_beta/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2017-04-22_beta/Dockerfile)
 -	[`2017-02-16` (*2017-02-16/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2017-02-16/Dockerfile)
 -	[`2016-05-17` (*2016-05-17/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2016-05-17/Dockerfile)
 - [`2016-04-19` (*2016-04-19/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2016-04-19/Dockerfile)
