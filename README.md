@@ -38,7 +38,7 @@ CorsParams:	*
 
 This will add your current directory as a volume to the container and publish host port to container port.
 
-### Verify the DynamoDB Local instance
+### Verify the DynamoDB Local instance with AWS CLI
 
 Create a Table
 ```console
@@ -54,6 +54,8 @@ $ aws dynamodb list-tables --endpoint-url http://0.0.0.0:8000 --output json
     ]
 }
 ```
+
+For complete list of available commands please refer [AWS DynamoDB CLI](http://docs.aws.amazon.com/cli/latest/reference/dynamodb/).
 
 ## License
 
