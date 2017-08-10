@@ -19,6 +19,7 @@ keys = [key.text for content in root.findall('{http://s3.amazonaws.com/doc/2006-
 print(keys)
 
 dockerfile = open('Dockerfile').read()
+entrypoint = open('docker-entrypoint.sh').read()
 for key in keys:
     version = key.replace('dynamodb_local_', '').replace('.tar.gz', '')
     print('Key = ' + key + ', version = ' + version)
@@ -31,6 +32,7 @@ for key in keys:
         pass
     new_dockerfile = dockerfile.replace('latest', version)
     open(os.path.join(version, 'Dockerfile'), 'w').write(new_dockerfile)
+    open(os.path.join(version, 'docker-entrypoint.sh'), 'w').write(entrypoint)
 
 # test
 for d in os.listdir('.'):
