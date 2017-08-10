@@ -57,6 +57,14 @@ $ aws dynamodb list-tables --endpoint-url http://0.0.0.0:8000 --output json
 
 For complete list of available commands please refer [AWS DynamoDB CLI](http://docs.aws.amazon.com/cli/latest/reference/dynamodb/).
 
+## Environment Variables
+
+### JAVA_OPTS
+
+This optional environment variable can be used to set JVM options.
+
+Example usage: `docker run -v "$PWD":/dynamodb_local_db -p 8000:8000 -e JAVA_OPTS='-Xmx256m' cnadiminti/dynamodb-local:latest`
+
 ## License
 
 - [Amazon DynamoDB Local License Agreement](https://aws.amazon.com/dynamodb-local-license/)
