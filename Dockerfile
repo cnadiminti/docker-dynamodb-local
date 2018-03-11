@@ -9,6 +9,7 @@ WORKDIR /var/dynamodb_local
 VOLUME ["/dynamodb_local_db"]
 
 ENV DYNAMODB_VERSION=latest
+ENV DYNAMODB_PORT=8000
 
 ENV JAVA_OPTS=
 
@@ -20,6 +21,4 @@ COPY ./docker-entrypoint.sh /
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-EXPOSE 8000
-
-CMD ["--sharedDb", "-dbPath", "/dynamodb_local_db", "-port", "8000"]
+CMD ["--sharedDb", "-dbPath", "/dynamodb_local_db"]
