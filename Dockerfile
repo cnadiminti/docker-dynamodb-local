@@ -9,6 +9,7 @@ WORKDIR /var/dynamodb_local
 VOLUME ["/dynamodb_local_db"]
 
 ENV DYNAMODB_VERSION=latest
+
 ENV DYNAMODB_PORT=8000
 
 ENV JAVA_OPTS=

@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 
 import os
 import subprocess
@@ -23,7 +23,7 @@ entrypoint = open('docker-entrypoint.sh').read()
 for key in keys:
     version = key.replace('dynamodb_local_', '').replace('.tar.gz', '')
     print('Key = ' + key + ', version = ' + version)
-    if (version == 'latest' or version < '2016-01-01'):
+    if (version == 'latest' or version < '2016-01-01' or version.startswith('test')):
         # Ignore older versions
         continue
     try:

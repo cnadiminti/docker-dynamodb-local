@@ -10,6 +10,8 @@ VOLUME ["/dynamodb_local_db"]
 
 ENV DYNAMODB_VERSION=2017-02-16
 
+ENV DYNAMODB_PORT=8000
+
 ENV JAVA_OPTS=
 
 RUN curl -O https://s3-us-west-2.amazonaws.com/dynamodb-local/dynamodb_local_${DYNAMODB_VERSION}.tar.gz && \
@@ -20,6 +22,4 @@ COPY ./docker-entrypoint.sh /
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
-EXPOSE 8000
-
-CMD ["--sharedDb", "-dbPath", "/dynamodb_local_db", "-port", "8000"]
+CMD ["--sharedDb", "-dbPath", "/dynamodb_local_db"]
