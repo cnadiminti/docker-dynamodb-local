@@ -65,6 +65,12 @@ This optional environment variable can be used to set JVM options.
 
 Example usage: `docker run -v "$PWD":/dynamodb_local_db -p 8000:8000 -e JAVA_OPTS='-Xmx256m' cnadiminti/dynamodb-local:latest`
 
+### DYNAMODB_PORT
+
+This optional environment variable can be used to overwrite the default port (8000).
+
+Example usage: `docker run -v "$PWD":/dynamodb_local_db -e DYNAMODB_PORT=443 -p 8000:443 cnadiminti/dynamodb-local:latest`
+
 ## License
 
 - [Amazon DynamoDB Local License Agreement](https://aws.amazon.com/dynamodb-local-license/)

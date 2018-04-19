@@ -22,4 +22,6 @@ COPY ./docker-entrypoint.sh /
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
+EXPOSE 8000
+
 CMD ["--sharedDb", "-dbPath", "/dynamodb_local_db"]
