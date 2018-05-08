@@ -23,7 +23,7 @@ entrypoint = open('docker-entrypoint.sh').read()
 for key in keys:
     version = key.replace('dynamodb_local_', '').replace('.tar.gz', '')
     print('Key = ' + key + ', version = ' + version)
-    if (version == 'latest' or version < '2016-01-01' or version.startswith('test')):
+    if version == 'latest' or version < '2016-01-01' or version.startswith('test'):
         # Ignore older versions
         continue
     try:
@@ -33,6 +33,7 @@ for key in keys:
     new_dockerfile = dockerfile.replace('latest', version)
     open(os.path.join(version, 'Dockerfile'), 'w').write(new_dockerfile)
     open(os.path.join(version, 'docker-entrypoint.sh'), 'w').write(entrypoint)
+    os.chmod(os.path.join(version, 'docker-entrypoint.sh'), 0o755)
 
 # test
 for d in os.listdir('.'):
