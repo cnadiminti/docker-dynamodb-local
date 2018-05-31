@@ -23,8 +23,9 @@ entrypoint = open('docker-entrypoint.sh').read()
 for key in keys:
     version = key.replace('dynamodb_local_', '').replace('.tar.gz', '')
     print('Key = ' + key + ', version = ' + version)
-    if version == 'latest' or version < '2016-01-01' or version.startswith('test'):
+    if version == 'latest' or version < '2016-04-19' or version.startswith('test'):
         # Ignore older versions
+        # *.tar.gz.sha256 is not available for versions older than 2016-04-19
         continue
     try:
         os.mkdir(version)
