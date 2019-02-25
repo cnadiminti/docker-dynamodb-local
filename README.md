@@ -5,6 +5,8 @@ This is the Git repo of the [Docker image](https://hub.docker.com/r/cnadiminti/d
 ## Supported tags and respective `Dockerfile` links
 
 - [`latest` (*latest/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/Dockerfile)
+- [`2019-02-07` (*2019-02-07/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2019-02-07/Dockerfile)
+- [`2019-02-04` (*2019-02-04/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2019-02-04/Dockerfile)
 - [`2018-04-11` (*2018-04-11/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2018-04-11/Dockerfile)
 - [`2017-04-22_beta` (*2017-04-22_beta/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2017-04-22_beta/Dockerfile)
 - [`2017-02-16` (*2017-02-16/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2017-02-16/Dockerfile)
@@ -77,6 +79,10 @@ Example usage: `docker run -v "$PWD":/dynamodb_local_db -e DYNAMODB_PORT=443 -p 
 - [Amazon DynamoDB Local License Agreement](https://aws.amazon.com/dynamodb-local-license/)
 
 - [OpenJDK License Agreement](http://openjdk.java.net/legal/gplv2+ce.html)
+
+## Alternatives
+
+- https://aws.amazon.com/about-aws/whats-new/2018/08/use-amazon-dynamodb-local-more-easily-with-the-new-docker-image/
 
 ## User Feedback
 
