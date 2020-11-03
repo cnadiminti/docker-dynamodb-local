@@ -5,7 +5,13 @@ This is the Git repo of the [Docker image](https://hub.docker.com/r/cnadiminti/d
 ## Supported tags and respective `Dockerfile` links
 
 - [`latest` (*latest/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/Dockerfile)
-- [`2020-01-24` (*2019-02-07/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2020-01-24/Dockerfile)
+- [`2020-10-12` (*2020-10-12/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2020-10-12/Dockerfile)
+- [`2020-09-11` (*2020-09-11/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2020-09-11/Dockerfile)
+- [`2020-08-19` (*2020-08-19/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2020-08-19/Dockerfile)
+- [`2020-07-21` (*2020-07-21/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2020-07-21/Dockerfile)
+- [`2020-05-28` (*2020-05-28/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2020-05-28/Dockerfile)
+- [`2020-05-19` (*2020-05-19/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2020-05-19/Dockerfile)
+- [`2020-01-24` (*2020-01-24/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2020-01-24/Dockerfile)
 - [`2019-02-07` (*2019-02-07/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2019-02-07/Dockerfile)
 - [`2019-02-04` (*2019-02-04/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2019-02-04/Dockerfile)
 - [`2018-04-11` (*2018-04-11/Dockerfile*)](https://github.com/cnadiminti/docker-dynamodb-local/blob/master/2018-04-11/Dockerfile)
